@@ -18,7 +18,7 @@ async function redactPiiFromTest (data) {
   })
 
   const prompt = `replace any personally identifiable information  (PII) 
-  such as names, addresses, phone numbers, and email addresses, social security numbers, date of birth, credit card numbers and any other sensitive data in the following text with the word "[REDACTED]":
+  such as names, addresses, phone numbers, and email addresses, social security numbers, date of birth, credit card numbers, passcodes, passwords and any other sensitive data in the following text with the word "[REDACTED]":
   ${data}
   `
   const results = await openAI.chat.completions.create({
